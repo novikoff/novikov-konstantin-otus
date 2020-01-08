@@ -1,0 +1,29 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function sum(v1){
+			function zf1(v2){
+				if(typeof v2 !== "undefined") {
+					
+					return sum(v1+v2);
+				}else{
+					
+					return v1;
+				}
+			}
+			zf1.toString = function() {
+				return v1;
+			};
+			return zf1;
+		}
+
+var a=sum(1)(2)(3)(4)();
+console.log(a);
+alert(a);
+	</script>
+</body>
+</html>
