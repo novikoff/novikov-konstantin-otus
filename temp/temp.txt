@@ -1,0 +1,46 @@
+<html>
+<head>
+</head>
+<script>
+function getPath(el){
+	console.log(el.tagName);
+	console.log(el.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode);
+	console.log(el.parentNode.querySelectorAll(el.tagName));
+	let selector = el.tagName;
+	/*if(el.parentNode.querySelectorAll(el.tagName).length>1){
+		if(el.id ){
+			selector +="#"+el.id;
+		}else if(el.className ){
+			
+		}
+	}
+	*/
+	while(el.parentNode.tagName!="BODY"){
+		el=el.parentNode;
+	}
+}
+
+</script>
+<body>
+	<div>
+		<div>
+		</div>
+		<div>
+			<div>
+			
+			</div>
+			<div attr1="d2">
+				<div class="d1">
+					<div id="d2">
+						<div name="d3">
+							<span>----&nbsp;&nbsp;&nbsp;</span>
+							<span>My element</span>
+							<span>&nbsp;&nbsp;&nbsp;----</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
