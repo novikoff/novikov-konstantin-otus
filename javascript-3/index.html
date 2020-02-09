@@ -1,0 +1,81 @@
+<html>
+<head>
+</head>
+<script>
+function getPath(el){
+	let selector = "";
+	let selector_arr =[];
+	el_current=el;
+	while(el_current.parentNode.tagName!="BODY"){
+		selector_arr.push(get_unic(el_current));
+		
+		selector=selector_arr.reverse().join(">");
+		console.log("selector:"+selector);
+		if(document.querySelectorAll(selector).length==1 /*&& 1==2*/){
+			break;
+		}
+		selector_arr.reverse();
+		el_current = el_current.parentNode;
+	}
+	return selector;
+	function get_unic(el_current){
+		el_current_selector = el_current.tagName.toLocaleLowerCase();
+		if(el_current.id!=""){
+			el_current_selector +="#"+el_current.id;
+		}
+		if(el_current.className!=""){
+			el_current_selector+="."+el_current.className.trim().split(" ").join(".");
+		}
+		if(el_current.nextElementSibling !=null || el_current.previousElementSibling!=null){
+			get_sibling_elem=el_current;
+			count_prev=0;
+			nth_child=1;
+			while (get_sibling_elem = get_sibling_elem.previousSibling) {
+				if (get_sibling_elem.nodeType === 3) {
+				continue; 
+				}
+				count_prev++;
+			}
+			nth_child=count_prev+1;
+			el_current_selector+=":nth-child("+nth_child+")";
+		}
+		
+		return el_current_selector;
+	}
+}
+
+
+</script>
+<body>
+	<div>
+		<div>
+		</div>
+		<div>
+			<div>
+			
+			</div>
+			<div attr1="d2">
+				<div class="d1">
+					<div id="d2">
+						<div name="d3">
+							<span>----&nbsp;&nbsp;&nbsp;</span>
+							<span>My element</span>
+							<span>&nbsp;&nbsp;&nbsp;----</span>
+						</div>
+						<div>
+							<span class="">----&nbsp;&nbsp;&nbsp;</span>
+							<span class="el_class">My element</span>
+							<span class="">&nbsp;&nbsp;&nbsp;----</span>
+						</div>
+						<div>
+							<span>----&nbsp;&nbsp;&nbsp;</span>
+							<span id="oo1oo">My element</span>
+							<span >&nbsp;&nbsp;&nbsp;----</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
