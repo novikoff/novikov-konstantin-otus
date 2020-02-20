@@ -1,10 +1,10 @@
-import { LitElement,html,css  } from "lit-element"
-import {repeat} from 'lit-html/directives/repeat';
+import { LitElement, html, css } from "lit-element"
+import { repeat } from 'lit-html/directives/repeat';
 
-class MyTree extends LitElement{
-    static get properties(){
+class MyTree extends LitElement {
+    static get properties() {
         return {
-            data:{type:String }
+            data: { type: String }
         }
     }
     constructor() {
@@ -12,7 +12,7 @@ class MyTree extends LitElement{
         this.data = ``;
     }
     static get styles() {
-        return css`
+        return css `
         .block{
             border:1px solid black;
             background:#CCFFAD;
@@ -22,27 +22,27 @@ class MyTree extends LitElement{
             font-size:1.2em;
         }
         `;
-    } 
-    render(){
-        this.json = JSON.parse(this.data);
-
-        return html`
+    }
+    render() {
+            this.json = JSON.parse(this.data);
+            return html `
             <div class="block">
-            <div class="tree_name">
-                ${this.json.id}
+                <div class="tree_name">
+                    <my-leaf .id=${this.json.id}></my-leaf>
+                </div>
+                ${(this.json.items)?html `
+                <div class="tree_list">
+                    <ul>
+                        ${repeat(
+                            this.json.items,
+                            (item, idx) => html`
+                            <li><my-tree .data=${JSON.stringify(item)}></my-tree></li>`
+                        )}
+                    </ul>
+                </div>
+                `:html``
+                }
             </div>
-            
-            <div class="tree_list"><ul>
-                ${repeat(
-                    this.json.items,
-                    (item, idx) => html`
-                
-                <li><my-leaf .data=${JSON.stringify(item)}></my-leaf></li>
-            `
-                )}
-            </ul></div>
-            </div>
-
         `;
     }
 }
