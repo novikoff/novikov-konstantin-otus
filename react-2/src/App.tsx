@@ -1,5 +1,4 @@
 import React,{ Component } from 'react';
-import HelloWorld from './HelloWorld/HelloWorld'; 
 import SelectCity from './SelectCity/SelectCity'; 
 import City from './City/City'; 
 import { render } from 'react-dom';
@@ -12,11 +11,13 @@ interface iProps{
  interface IState{
      count:number;
      date:any;
-     selectedCity:cityElement
-     favoriteCity:cityElement[];
+     selectedCity:number
+     favoriteCity:number[];
+     CityArr:any[];
  }
 
  interface cityElement {
+    favorite?:boolean
     index: number;
     name: string;
     temp:string;
@@ -36,65 +37,75 @@ export default class App extends Component<iProps,IState>{
             count:props.initialValue?props.initialValue:0,
             date: new Date(),
             favoriteCity:[],
-            selectedCity:null
+            selectedCity:null,
+            CityArr:data.features.map( (el,index)=>{
+                return {...el.properties,index}
+                }
+            )
           }
         
-        this.addFavorite = this.addFavorite.bind(this);
-        this.removeFavorite = this.removeFavorite.bind(this);
-        this.changeSelected = this.changeSelected.bind(this);
-        this.checkFavorite = this.checkFavorite.bind(this);
+     
       }
     
      
-    changeSelected(el:cityElement){
-       
+    changeSelected = (id:number)=>{
         this.setState({
-            selectedCity:el
+            selectedCity:id,
           })
     } 
 
-    checkFavorite(el:cityElement):boolean{
-        if(this.state.favoriteCity.length){
-            return !!this.state.favoriteCity.find(city=>{
-                if(el.index == city.index){
-                    return true;
-                }
-            })
-        }
-        return false;
+    checkFavorite = (id:number):boolean => {
+        
+        return !!this.state.favoriteCity.find(city=> id== city);
     }
 
-    addFavorite(el:cityElement){
-       if(!this.checkFavorite(el)){ 
+    addFavorite = (id:number)=>{
+       if(!this.checkFavorite(id)){ 
             this.setState({
-                favoriteCity:[...this.state.favoriteCity,el]
+                favoriteCity:[...this.state.favoriteCity,id]
             })
-            
+            return true
         }
     }
 
-    removeFavorite(el:cityElement){
+    removeFavorite = (el:number) => {
         this.setState({
             favoriteCity:this.state.favoriteCity.filter(city=>{
-                return el.index!=city.index;
+                return el!=city;
             })
+        })
+        return true
+    }
+
+    getCityArr = ()=>{
+        return this.state.CityArr;
+    }
+
+    getCityProps =(id)=>{
+        return this.state.CityArr.find(el=>{
+            return id==el.index;
         })
     }
 
 
     render(){
-        
         return(
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <div className="App"><SelectCity  changeSelected={this.changeSelected} >{data.features}</SelectCity></div>
+                        <div className="App"><SelectCity changeSelected={this.changeSelected} getCityArr={this.getCityArr}/></div>
                     </div>
                 </div>
                 <div className="row mt-3">
                    {
                        this.state.selectedCity!=null && (
-                       <City addFavorite={this.addFavorite} removeFavorite={this.removeFavorite} checkFavorite={this.checkFavorite} >{this.state.selectedCity}</City>
+                        
+                       <City 
+                        addFavorite={this.addFavorite}
+                        removeFavorite={this.removeFavorite} 
+                        favorite = {this.checkFavorite(this.state.selectedCity)}
+                        {...this.getCityProps(this.state.selectedCity)}
+                       ></City>
                        )
                    }
                    
@@ -107,15 +118,23 @@ export default class App extends Component<iProps,IState>{
                     </div>
                     <div className="row mt-2">
                     
-                    {this.state.favoriteCity.map(el=>{
-                        return <City addFavorite={this.addFavorite} removeFavorite={this.removeFavorite} favorite={true} key={el.index} checkFavorite={this.checkFavorite}>{el}</City>
+                    {this.state.favoriteCity.map((el,index)=>{
+                        return <City 
+                        addFavorite={this.addFavorite} 
+                        removeFavorite={this.removeFavorite} 
+                        favorite = {true}
+                        {...this.getCityProps(el)}
+
+                        key={index}
+                        />   
+                        
                     })
                     }
                     </div>
                 </React.Fragment>
                 }  
                    
-               
+            
                     
             </div>
         )

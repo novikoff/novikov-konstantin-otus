@@ -3,12 +3,12 @@ import React,{ Component } from 'react';
 
 
 interface IProps{
-    children:{[key: string]: any};
+    children?:{[key: string]: any};
+    getCityArr():{[key: string]: any};
     changeSelected(object):any;
 }
  interface IState{
     CityArr:{[key: string]: any};
-    FullData:{[key: string]: any};
     selected:number;
     value:any;
  }
@@ -28,57 +28,37 @@ interface IProps{
 export default class SelectCity extends Component<IProps,IState>{
     constructor(props){
         super(props);
-      
-        let CityArr = props.children.map(function(el,index) {
+      //console.log(props);
+        let CityArr = this.props.getCityArr().map(function(el,index) {
             return {
                 index:index,
-                name:el.properties.city+", "+el.properties.country,
-                temp:el.properties.temp,
-                clouds: el.properties.clouds,
-                humidity: el.properties.humidity,
-                pressure: el.properties.pressure,
-                feels_like: el.properties.feels_like,
-                wind_deg: el.properties.wind_deg,
-                wind_speed: el.properties.wind_speed
+                name:el.city+", "+el.country,
+                temp:el.temp,
+                clouds: el.clouds,
+                humidity: el.humidity,
+                pressure: el.pressure,
+                feels_like: el.feels_like,
+                wind_deg: el.wind_deg,
+                wind_speed: el.wind_speed
             };
         });
 
         this.state = {
             CityArr,
-            FullData:props.children,
             selected:null,
             value:"DEFAULT"
          }
         
-        //console.log(CityArr);
       }
-
-    /*componentDidUpdate(prevProps) {
-        if (this.props.userID !== prevProps.userID) {
-            this.fetchData(this.props.userID);
-        }
-    }*/
       
-    handleChangeSelected(event){
+    handleChangeSelected = (event)=>{
 
            this.setState({value:event.target.value})
             let el=this.state.CityArr.find(cityEl=>{
                 return cityEl.index==event.target.value
              })
 
-            this.props.changeSelected(
-                {
-                    index:el.index,
-                    name:el.name,
-                    temp:el.temp,
-                    clouds: el.clouds,
-                    humidity: el.humidity,
-                    pressure: el.pressure,
-                    feels_like: el.feels_like,
-                    wind_deg: el.wind_deg,
-                    wind_speed: el.wind_speed
-                }
-            );
+            this.props.changeSelected(el.index);
     }
 
     
@@ -90,7 +70,7 @@ export default class SelectCity extends Component<IProps,IState>{
                     className="form-control" 
                     name="" 
                     id=""
-                    onChange={this.handleChangeSelected.bind(this)}
+                    onChange={this.handleChangeSelected}
                     value={this.state.value} 
                     >
                     <option value="DEFAULT" disabled>Select City...</option>
