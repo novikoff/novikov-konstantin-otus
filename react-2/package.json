@@ -11,6 +11,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@types/node": "^13.13.5",
         "bootstrap": "^4.4.1",
         "glyphicons": "^0.2.0",
         "mini-css-extract-plugin": "^0.9.0",
@@ -18,6 +19,7 @@
         "react": "^16.13.0",
         "react-bootstrap": "^1.0.0",
         "react-dom": "^16.13.0",
+        "require": "^2.4.20",
         "webpack-dev-server": "^3.10.3"
     },
     "devDependencies": {
@@ -36,6 +38,8 @@
         "html-webpack-plugin": "^3.2.0",
         "less": "^3.11.1",
         "less-loader": "^5.0.0",
+        "prettier": "^2.0.5",
+        "prettier-webpack-plugin": "^1.2.0",
         "style-loader": "^1.1.3",
         "styled-components": "^5.1.0",
         "url-loader": "^4.1.0",

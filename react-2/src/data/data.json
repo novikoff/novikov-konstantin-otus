@@ -1,905 +1,959 @@
 {
-    "type": "FeatureCollection",
-    "features": [{
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [10.4, 63.43]
-        },
-        "properties": {
-            "city": "Trondheim",
-            "clouds": 75,
-            "country": "NO",
-            "humidity": 91,
-            "pressure": 1023,
-            "temp": 1.44,
-            "feels_like": -6.62,
-            "wind_deg": 320,
-            "wind_speed": 8.7
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [10.75, 59.91]
-        },
-        "properties": {
-            "city": "Oslo",
-            "clouds": 9,
-            "country": "NO",
-            "humidity": 47,
-            "pressure": 1024,
-            "temp": 1.67,
-            "feels_like": -2.31,
-            "wind_deg": 330,
-            "wind_speed": 1.5
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [20.26, 63.83]
-        },
-        "properties": {
-            "city": "Umea",
-            "clouds": 53,
-            "country": "SE",
-            "humidity": 58,
-            "pressure": 1016,
-            "temp": -1.31,
-            "feels_like": -6.77,
-            "wind_deg": 300,
-            "wind_speed": 3.6
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [18.06, 59.33]
-        },
-        "properties": {
-            "city": "Stockholm",
-            "clouds": 10,
-            "country": "SE",
-            "humidity": 48,
-            "pressure": 1020,
-            "temp": 3.73,
-            "feels_like": -0.83,
-            "wind_deg": 270,
-            "wind_speed": 2.6
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [25.47, 65.01]
-        },
-        "properties": {
-            "city": "Oulu",
-            "clouds": 0,
-            "country": "FI",
-            "humidity": 85,
-            "pressure": 1013,
-            "temp": -4.9,
-            "feels_like": -8.76,
-            "wind_deg": 330,
-            "wind_speed": 1.5
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [30.26, 59.89]
-        },
-        "properties": {
-            "city": "Saint Petersburg",
-            "clouds": 14,
-            "country": "RU",
-            "humidity": 74,
-            "pressure": 1010,
-            "temp": 1.76,
-            "feels_like": -2.65,
-            "wind_deg": 270,
-            "wind_speed": 3
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [40.54, 64.54]
-        },
-        "properties": {
-            "city": "Arkhangelsk",
-            "clouds": 90,
-            "country": "RU",
-            "humidity": 86,
-            "pressure": 1004,
-            "temp": -2,
-            "feels_like": -6.6,
-            "wind_deg": 10,
-            "wind_speed": 3
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [44, 56.33]
-        },
-        "properties": {
-            "city": "Nizhniy Novgorod",
-            "clouds": 100,
-            "country": "RU",
-            "humidity": 76,
-            "pressure": 1006,
-            "temp": 7.92,
-            "feels_like": 3.79,
-            "wind_deg": 200,
-            "wind_speed": 4
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.89, 52.37]
-        },
-        "properties": {
-            "city": "Amsterdam",
-            "clouds": 34,
-            "country": "NL",
-            "humidity": 81,
-            "pressure": 1028,
-            "temp": 8.65,
-            "feels_like": 5.12,
-            "wind_deg": 60,
-            "wind_speed": 3.6
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [2.35, 48.85]
-        },
-        "properties": {
-            "city": "Paris",
-            "clouds": 2,
-            "country": "FR",
-            "humidity": 45,
-            "pressure": 1023,
-            "temp": 14.54,
-            "feels_like": 10.47,
-            "wind_deg": 20,
-            "wind_speed": 3.6
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [14.42, 50.09]
-        },
-        "properties": {
-            "city": "Prague",
-            "clouds": 2,
-            "country": "CZ",
-            "humidity": 70,
-            "pressure": 1025,
-            "temp": 10.23,
-            "feels_like": 8.06,
-            "wind_deg": 310,
-            "wind_speed": 1.5
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [19.04, 47.5]
-        },
-        "properties": {
-            "city": "Budapest",
-            "clouds": 0,
-            "country": "HU",
-            "humidity": 56,
-            "pressure": 1020,
-            "temp": 10.36,
-            "feels_like": 7.63,
-            "wind_deg": 300,
-            "wind_speed": 1.5
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [30.52, 50.43]
-        },
-        "properties": {
-            "city": "Kiev",
-            "clouds": 28,
-            "country": "UA",
-            "humidity": 45,
-            "pressure": 1012,
-            "temp": 8.28,
-            "feels_like": 4.5,
-            "wind_deg": 240,
-            "wind_speed": 2
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [23.32, 42.7]
-        },
-        "properties": {
-            "city": "Sofia",
-            "clouds": 0,
-            "country": "BG",
-            "humidity": 65,
-            "pressure": 1020,
-            "temp": 2.77,
-            "feels_like": -0.33,
-            "wind_deg": null,
-            "wind_speed": 1
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [36.25, 50]
-        },
-        "properties": {
-            "city": "Kharkiv",
-            "clouds": 0,
-            "country": "UA",
-            "humidity": 61,
-            "pressure": 1014,
-            "temp": 9.72,
-            "feels_like": 6.19,
-            "wind_deg": 200,
-            "wind_speed": 2.79
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [39.71, 47.24]
-        },
-        "properties": {
-            "city": "Rostov-na-Donu",
-            "clouds": 0,
-            "country": "RU",
-            "humidity": 36,
-            "pressure": 1016,
-            "temp": 7.9,
-            "feels_like": 3.06,
-            "wind_deg": 130,
-            "wind_speed": 3
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [18.96, 69.65]
-        },
-        "properties": {
-            "city": "Tromso",
-            "clouds": 75,
-            "country": "NO",
-            "humidity": 92,
-            "pressure": 1009,
-            "temp": -3,
-            "feels_like": -15.94,
-            "wind_deg": 310,
-            "wind_speed": 14.9
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [23.68, 70.66]
-        },
-        "properties": {
-            "city": "Hammerfest",
-            "clouds": 75,
-            "country": "NO",
-            "humidity": 73,
-            "pressure": 1004,
-            "temp": -3,
-            "feels_like": -9.04,
-            "wind_deg": 210,
-            "wind_speed": 4.6
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [33.09, 68.98]
-        },
-        "properties": {
-            "city": "Murmansk",
-            "clouds": 12,
-            "country": "RU",
-            "humidity": 67,
-            "pressure": 1006,
-            "temp": -7,
-            "feels_like": -12.3,
-            "wind_deg": 260,
-            "wind_speed": 3
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [34.56, 67.94]
-        },
-        "properties": {
-            "city": "Revda",
-            "clouds": 46,
-            "country": "RU",
-            "humidity": 94,
-            "pressure": 1008,
-            "temp": -12.38,
-            "feels_like": -17.77,
-            "wind_deg": 254,
-            "wind_speed": 3.04
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-21.91, 64.11]
-        },
-        "properties": {
-            "city": "Kopavogur",
-            "clouds": 100,
-            "country": "IS",
-            "humidity": 64,
-            "pressure": 1021,
-            "temp": 0.8,
-            "feels_like": -3.65,
-            "wind_deg": 90,
-            "wind_speed": 2.6
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-6.77, 62.01]
-        },
-        "properties": {
-            "city": "Torshavn",
-            "clouds": 94,
-            "country": "FO",
-            "humidity": 86,
-            "pressure": 1025,
-            "temp": 5,
-            "feels_like": 2.42,
-            "wind_deg": 210,
-            "wind_speed": 1.5
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-2.1, 57.14]
-        },
-        "properties": {
-            "city": "Aberdeen",
-            "clouds": 90,
-            "country": "GB",
-            "humidity": 87,
-            "pressure": 1027,
-            "temp": 6.48,
-            "feels_like": 1.26,
-            "wind_deg": 170,
-            "wind_speed": 5.7
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [53.68, 63.57]
-        },
-        "properties": {
-            "city": "Ukhta",
-            "clouds": 100,
-            "country": "RU",
-            "humidity": 98,
-            "pressure": 999,
-            "temp": 0.42,
-            "feels_like": -2.69,
-            "wind_deg": 285,
-            "wind_speed": 1.63
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [53.23, 56.85]
-        },
-        "properties": {
-            "city": "Izhevsk",
-            "clouds": 79,
-            "country": "RU",
-            "humidity": 75,
-            "pressure": 1010,
-            "temp": 4.44,
-            "feels_like": 0.7,
-            "wind_deg": 191,
-            "wind_speed": 2.59
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [65.39, 62.14]
-        },
-        "properties": {
-            "city": "Nyagan",
-            "clouds": 97,
-            "country": "RU",
-            "humidity": 93,
-            "pressure": 1008,
-            "temp": -1.58,
-            "feels_like": -7.42,
-            "wind_deg": 211,
-            "wind_speed": 5.02
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [60.61, 56.86]
-        },
-        "properties": {
-            "city": "Yekaterinburg",
-            "clouds": 95,
-            "country": "RU",
-            "humidity": 100,
-            "pressure": 1015,
-            "temp": -4,
-            "feels_like": -7.9,
-            "wind_deg": 120,
-            "wind_speed": 2
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-0.09, 51.51]
-        },
-        "properties": {
-            "city": "City of London",
-            "clouds": 15,
-            "country": "GB",
-            "humidity": 76,
-            "pressure": 1026,
-            "temp": 10.51,
-            "feels_like": 6.47,
-            "wind_deg": 90,
-            "wind_speed": 4.6
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-0.88, 41.66]
-        },
-        "properties": {
-            "city": "Zaragoza",
-            "clouds": 40,
-            "country": "ES",
-            "humidity": 63,
-            "pressure": 1020,
-            "temp": 13.14,
-            "feels_like": 10.11,
-            "wind_deg": 110,
-            "wind_speed": 3.1
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [50.15, 53.2]
-        },
-        "properties": {
-            "city": "Samara",
-            "clouds": 5,
-            "country": "RU",
-            "humidity": 39,
-            "pressure": 1016,
-            "temp": 9,
-            "feels_like": 1.58,
-            "wind_deg": 230,
-            "wind_speed": 7
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [48.04, 46.35]
-        },
-        "properties": {
-            "city": "Astrakhan",
-            "clouds": 37,
-            "country": "RU",
-            "humidity": 75,
-            "pressure": 1020,
-            "temp": 5.83,
-            "feels_like": 1.31,
-            "wind_deg": 70,
-            "wind_speed": 4
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [61.43, 55.15]
-        },
-        "properties": {
-            "city": "Chelyabinsk",
-            "clouds": 20,
-            "country": "RU",
-            "humidity": 80,
-            "pressure": 1017,
-            "temp": 2,
-            "feels_like": -0.84,
-            "wind_deg": 260,
-            "wind_speed": 1
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [65.51, 44.85]
-        },
-        "properties": {
-            "city": "Qyzylorda",
-            "clouds": 0,
-            "country": "KZ",
-            "humidity": 58,
-            "pressure": 1031,
-            "temp": -1,
-            "feels_like": -6.01,
-            "wind_deg": 130,
-            "wind_speed": 3
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [3.48, 36.77]
-        },
-        "properties": {
-            "city": "Boumerdas",
-            "clouds": 40,
-            "country": "DZ",
-            "humidity": 87,
-            "pressure": 1019,
-            "temp": 13,
-            "feels_like": 12.59,
-            "wind_deg": null,
-            "wind_speed": 1
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.33, 31.95]
-        },
-        "properties": {
-            "city": "Ouargla",
-            "clouds": 40,
-            "country": "DZ",
-            "humidity": 31,
-            "pressure": 1018,
-            "temp": 23,
-            "feels_like": 18.3,
-            "wind_deg": 100,
-            "wind_speed": 5.1
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [13.19, 32.88]
-        },
-        "properties": {
-            "city": "Tripoli",
-            "clouds": 3,
-            "country": "LY",
-            "humidity": 63,
-            "pressure": 1023,
-            "temp": 16.02,
-            "feels_like": 11.15,
-            "wind_deg": 119,
-            "wind_speed": 6.64
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [20.23, 30.76]
-        },
-        "properties": {
-            "city": "Ajdabiya",
-            "clouds": 9,
-            "country": "LY",
-            "humidity": 66,
-            "pressure": 1020,
-            "temp": 15.52,
-            "feels_like": 11.76,
-            "wind_deg": 337,
-            "wind_speed": 5.13
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [28.95, 41.01]
-        },
-        "properties": {
-            "city": "Istanbul",
-            "clouds": 0,
-            "country": "TR",
-            "humidity": 87,
-            "pressure": 1018,
-            "temp": 5.77,
-            "feels_like": 3.36,
-            "wind_deg": 10,
-            "wind_speed": 1.5
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [31.25, 30.06]
-        },
-        "properties": {
-            "city": "Cairo",
-            "clouds": 7,
-            "country": "EG",
-            "humidity": 59,
-            "pressure": 1016,
-            "temp": 15.54,
-            "feels_like": 13.15,
-            "wind_deg": 330,
-            "wind_speed": 2.6
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [44.4, 33.34]
-        },
-        "properties": {
-            "city": "Baghdad",
-            "clouds": 0,
-            "country": "IQ",
-            "humidity": 52,
-            "pressure": 1004,
-            "temp": 19,
-            "feels_like": 16.94,
-            "wind_deg": 330,
-            "wind_speed": 2.6
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [39.61, 24.47]
-        },
-        "properties": {
-            "city": "Medina",
-            "clouds": 0,
-            "country": "SA",
-            "humidity": 18,
-            "pressure": 1012,
-            "temp": 28,
-            "feels_like": 22.67,
-            "wind_deg": 280,
-            "wind_speed": 5.1
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-22.45, 70.45]
-        },
-        "properties": {
-            "city": "Ittorisseq",
-            "clouds": 0,
-            "country": "GL",
-            "humidity": 50,
-            "pressure": 1024,
-            "temp": -10.58,
-            "feels_like": -16.1,
-            "wind_deg": 356,
-            "wind_speed": 2.81
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-8.72, 70.92]
-        },
-        "properties": {
-            "city": "Olonkinbyen",
-            "clouds": 36,
-            "country": "SJ",
-            "humidity": 53,
-            "pressure": 1022,
-            "temp": -3.38,
-            "feels_like": -8.93,
-            "wind_deg": 312,
-            "wind_speed": 3.4
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [53.09, 67.67]
-        },
-        "properties": {
-            "city": "Naryan-Mar",
-            "clouds": 94,
-            "country": "RU",
-            "humidity": 91,
-            "pressure": 994,
-            "temp": -6.78,
-            "feels_like": -13.84,
-            "wind_deg": 302,
-            "wind_speed": 5.95
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [64, 67.5]
-        },
-        "properties": {
-            "city": "Vorkuta",
-            "clouds": 100,
-            "country": "RU",
-            "humidity": 98,
-            "pressure": 990,
-            "temp": 0.02,
-            "feels_like": -6.66,
-            "wind_deg": 248,
-            "wind_speed": 6.65
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-16.9, 32.63]
-        },
-        "properties": {
-            "city": "Funchal",
-            "clouds": 20,
-            "country": "PT",
-            "humidity": 72,
-            "pressure": 1023,
-            "temp": 17.14,
-            "feels_like": 16.3,
-            "wind_deg": null,
-            "wind_speed": 2.1
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-15.41, 28.1]
-        },
-        "properties": {
-            "city": "Las Palmas de Gran Canaria",
-            "clouds": 75,
-            "country": "ES",
-            "humidity": 73,
-            "pressure": 1021,
-            "temp": 20.56,
-            "feels_like": 16.64,
-            "wind_deg": 10,
-            "wind_speed": 8.2
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-7.62, 33.59]
-        },
-        "properties": {
-            "city": "Casablanca",
-            "clouds": 75,
-            "country": "MA",
-            "humidity": 88,
-            "pressure": 1020,
-            "temp": 17.31,
-            "feels_like": 17.22,
-            "wind_deg": 350,
-            "wind_speed": 2.6
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-8.01, 31.63]
-        },
-        "properties": {
-            "city": "Marrakesh",
-            "clouds": 20,
-            "country": "MA",
-            "humidity": 56,
-            "pressure": 1020,
-            "temp": 20,
-            "feels_like": 18.84,
-            "wind_deg": 360,
-            "wind_speed": 2.1
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [51.42, 35.69]
-        },
-        "properties": {
-            "city": "Tehran",
-            "clouds": 90,
-            "country": "IR",
-            "humidity": 93,
-            "pressure": 1016,
-            "temp": 5.31,
-            "feels_like": 1.87,
-            "wind_deg": 260,
-            "wind_speed": 3.1
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [47.79, 30.53]
-        },
-        "properties": {
-            "city": "Al Basrah",
-            "clouds": 40,
-            "country": "IQ",
-            "humidity": 57,
-            "pressure": 1005,
-            "temp": 26,
-            "feels_like": 24.73,
-            "wind_deg": 150,
-            "wind_speed": 5.1
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [59.61, 36.3]
-        },
-        "properties": {
-            "city": "Mashhad",
-            "clouds": 75,
-            "country": "IR",
-            "humidity": 60,
-            "pressure": 1018,
-            "temp": 3,
-            "feels_like": -1.89,
-            "wind_deg": 308,
-            "wind_speed": 3.41
-        }
-    }, {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [67.08, 24.91]
-        },
-        "properties": {
-            "city": "Karachi",
-            "clouds": 0,
-            "country": "PK",
-            "humidity": 73,
-            "pressure": 1010,
-            "temp": 23,
-            "feels_like": 23.93,
-            "wind_deg": 240,
-            "wind_speed": 2.6
-        }
-    }]
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.4, 63.43]
+      },
+      "properties": {
+        "city": "Trondheim",
+        "clouds": 75,
+        "country": "NO",
+        "humidity": 91,
+        "pressure": 1023,
+        "temp": 1.44,
+        "feels_like": -6.62,
+        "wind_deg": 320,
+        "wind_speed": 8.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.75, 59.91]
+      },
+      "properties": {
+        "city": "Oslo",
+        "clouds": 9,
+        "country": "NO",
+        "humidity": 47,
+        "pressure": 1024,
+        "temp": 1.67,
+        "feels_like": -2.31,
+        "wind_deg": 330,
+        "wind_speed": 1.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [20.26, 63.83]
+      },
+      "properties": {
+        "city": "Umea",
+        "clouds": 53,
+        "country": "SE",
+        "humidity": 58,
+        "pressure": 1016,
+        "temp": -1.31,
+        "feels_like": -6.77,
+        "wind_deg": 300,
+        "wind_speed": 3.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.06, 59.33]
+      },
+      "properties": {
+        "city": "Stockholm",
+        "clouds": 10,
+        "country": "SE",
+        "humidity": 48,
+        "pressure": 1020,
+        "temp": 3.73,
+        "feels_like": -0.83,
+        "wind_deg": 270,
+        "wind_speed": 2.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [25.47, 65.01]
+      },
+      "properties": {
+        "city": "Oulu",
+        "clouds": 0,
+        "country": "FI",
+        "humidity": 85,
+        "pressure": 1013,
+        "temp": -4.9,
+        "feels_like": -8.76,
+        "wind_deg": 330,
+        "wind_speed": 1.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [30.26, 59.89]
+      },
+      "properties": {
+        "city": "Saint Petersburg",
+        "clouds": 14,
+        "country": "RU",
+        "humidity": 74,
+        "pressure": 1010,
+        "temp": 1.76,
+        "feels_like": -2.65,
+        "wind_deg": 270,
+        "wind_speed": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [40.54, 64.54]
+      },
+      "properties": {
+        "city": "Arkhangelsk",
+        "clouds": 90,
+        "country": "RU",
+        "humidity": 86,
+        "pressure": 1004,
+        "temp": -2,
+        "feels_like": -6.6,
+        "wind_deg": 10,
+        "wind_speed": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [44, 56.33]
+      },
+      "properties": {
+        "city": "Nizhniy Novgorod",
+        "clouds": 100,
+        "country": "RU",
+        "humidity": 76,
+        "pressure": 1006,
+        "temp": 7.92,
+        "feels_like": 3.79,
+        "wind_deg": 200,
+        "wind_speed": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.89, 52.37]
+      },
+      "properties": {
+        "city": "Amsterdam",
+        "clouds": 34,
+        "country": "NL",
+        "humidity": 81,
+        "pressure": 1028,
+        "temp": 8.65,
+        "feels_like": 5.12,
+        "wind_deg": 60,
+        "wind_speed": 3.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.35, 48.85]
+      },
+      "properties": {
+        "city": "Paris",
+        "clouds": 2,
+        "country": "FR",
+        "humidity": 45,
+        "pressure": 1023,
+        "temp": 14.54,
+        "feels_like": 10.47,
+        "wind_deg": 20,
+        "wind_speed": 3.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [14.42, 50.09]
+      },
+      "properties": {
+        "city": "Prague",
+        "clouds": 2,
+        "country": "CZ",
+        "humidity": 70,
+        "pressure": 1025,
+        "temp": 10.23,
+        "feels_like": 8.06,
+        "wind_deg": 310,
+        "wind_speed": 1.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [19.04, 47.5]
+      },
+      "properties": {
+        "city": "Budapest",
+        "clouds": 0,
+        "country": "HU",
+        "humidity": 56,
+        "pressure": 1020,
+        "temp": 10.36,
+        "feels_like": 7.63,
+        "wind_deg": 300,
+        "wind_speed": 1.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [30.52, 50.43]
+      },
+      "properties": {
+        "city": "Kiev",
+        "clouds": 28,
+        "country": "UA",
+        "humidity": 45,
+        "pressure": 1012,
+        "temp": 8.28,
+        "feels_like": 4.5,
+        "wind_deg": 240,
+        "wind_speed": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [23.32, 42.7]
+      },
+      "properties": {
+        "city": "Sofia",
+        "clouds": 0,
+        "country": "BG",
+        "humidity": 65,
+        "pressure": 1020,
+        "temp": 2.77,
+        "feels_like": -0.33,
+        "wind_deg": null,
+        "wind_speed": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [36.25, 50]
+      },
+      "properties": {
+        "city": "Kharkiv",
+        "clouds": 0,
+        "country": "UA",
+        "humidity": 61,
+        "pressure": 1014,
+        "temp": 9.72,
+        "feels_like": 6.19,
+        "wind_deg": 200,
+        "wind_speed": 2.79
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.71, 47.24]
+      },
+      "properties": {
+        "city": "Rostov-na-Donu",
+        "clouds": 0,
+        "country": "RU",
+        "humidity": 36,
+        "pressure": 1016,
+        "temp": 7.9,
+        "feels_like": 3.06,
+        "wind_deg": 130,
+        "wind_speed": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.96, 69.65]
+      },
+      "properties": {
+        "city": "Tromso",
+        "clouds": 75,
+        "country": "NO",
+        "humidity": 92,
+        "pressure": 1009,
+        "temp": -3,
+        "feels_like": -15.94,
+        "wind_deg": 310,
+        "wind_speed": 14.9
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [23.68, 70.66]
+      },
+      "properties": {
+        "city": "Hammerfest",
+        "clouds": 75,
+        "country": "NO",
+        "humidity": 73,
+        "pressure": 1004,
+        "temp": -3,
+        "feels_like": -9.04,
+        "wind_deg": 210,
+        "wind_speed": 4.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [33.09, 68.98]
+      },
+      "properties": {
+        "city": "Murmansk",
+        "clouds": 12,
+        "country": "RU",
+        "humidity": 67,
+        "pressure": 1006,
+        "temp": -7,
+        "feels_like": -12.3,
+        "wind_deg": 260,
+        "wind_speed": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [34.56, 67.94]
+      },
+      "properties": {
+        "city": "Revda",
+        "clouds": 46,
+        "country": "RU",
+        "humidity": 94,
+        "pressure": 1008,
+        "temp": -12.38,
+        "feels_like": -17.77,
+        "wind_deg": 254,
+        "wind_speed": 3.04
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-21.91, 64.11]
+      },
+      "properties": {
+        "city": "Kopavogur",
+        "clouds": 100,
+        "country": "IS",
+        "humidity": 64,
+        "pressure": 1021,
+        "temp": 0.8,
+        "feels_like": -3.65,
+        "wind_deg": 90,
+        "wind_speed": 2.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-6.77, 62.01]
+      },
+      "properties": {
+        "city": "Torshavn",
+        "clouds": 94,
+        "country": "FO",
+        "humidity": 86,
+        "pressure": 1025,
+        "temp": 5,
+        "feels_like": 2.42,
+        "wind_deg": 210,
+        "wind_speed": 1.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.1, 57.14]
+      },
+      "properties": {
+        "city": "Aberdeen",
+        "clouds": 90,
+        "country": "GB",
+        "humidity": 87,
+        "pressure": 1027,
+        "temp": 6.48,
+        "feels_like": 1.26,
+        "wind_deg": 170,
+        "wind_speed": 5.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [53.68, 63.57]
+      },
+      "properties": {
+        "city": "Ukhta",
+        "clouds": 100,
+        "country": "RU",
+        "humidity": 98,
+        "pressure": 999,
+        "temp": 0.42,
+        "feels_like": -2.69,
+        "wind_deg": 285,
+        "wind_speed": 1.63
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [53.23, 56.85]
+      },
+      "properties": {
+        "city": "Izhevsk",
+        "clouds": 79,
+        "country": "RU",
+        "humidity": 75,
+        "pressure": 1010,
+        "temp": 4.44,
+        "feels_like": 0.7,
+        "wind_deg": 191,
+        "wind_speed": 2.59
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [65.39, 62.14]
+      },
+      "properties": {
+        "city": "Nyagan",
+        "clouds": 97,
+        "country": "RU",
+        "humidity": 93,
+        "pressure": 1008,
+        "temp": -1.58,
+        "feels_like": -7.42,
+        "wind_deg": 211,
+        "wind_speed": 5.02
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [60.61, 56.86]
+      },
+      "properties": {
+        "city": "Yekaterinburg",
+        "clouds": 95,
+        "country": "RU",
+        "humidity": 100,
+        "pressure": 1015,
+        "temp": -4,
+        "feels_like": -7.9,
+        "wind_deg": 120,
+        "wind_speed": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.09, 51.51]
+      },
+      "properties": {
+        "city": "City of London",
+        "clouds": 15,
+        "country": "GB",
+        "humidity": 76,
+        "pressure": 1026,
+        "temp": 10.51,
+        "feels_like": 6.47,
+        "wind_deg": 90,
+        "wind_speed": 4.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.88, 41.66]
+      },
+      "properties": {
+        "city": "Zaragoza",
+        "clouds": 40,
+        "country": "ES",
+        "humidity": 63,
+        "pressure": 1020,
+        "temp": 13.14,
+        "feels_like": 10.11,
+        "wind_deg": 110,
+        "wind_speed": 3.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [50.15, 53.2]
+      },
+      "properties": {
+        "city": "Samara",
+        "clouds": 5,
+        "country": "RU",
+        "humidity": 39,
+        "pressure": 1016,
+        "temp": 9,
+        "feels_like": 1.58,
+        "wind_deg": 230,
+        "wind_speed": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [48.04, 46.35]
+      },
+      "properties": {
+        "city": "Astrakhan",
+        "clouds": 37,
+        "country": "RU",
+        "humidity": 75,
+        "pressure": 1020,
+        "temp": 5.83,
+        "feels_like": 1.31,
+        "wind_deg": 70,
+        "wind_speed": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [61.43, 55.15]
+      },
+      "properties": {
+        "city": "Chelyabinsk",
+        "clouds": 20,
+        "country": "RU",
+        "humidity": 80,
+        "pressure": 1017,
+        "temp": 2,
+        "feels_like": -0.84,
+        "wind_deg": 260,
+        "wind_speed": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [65.51, 44.85]
+      },
+      "properties": {
+        "city": "Qyzylorda",
+        "clouds": 0,
+        "country": "KZ",
+        "humidity": 58,
+        "pressure": 1031,
+        "temp": -1,
+        "feels_like": -6.01,
+        "wind_deg": 130,
+        "wind_speed": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.48, 36.77]
+      },
+      "properties": {
+        "city": "Boumerdas",
+        "clouds": 40,
+        "country": "DZ",
+        "humidity": 87,
+        "pressure": 1019,
+        "temp": 13,
+        "feels_like": 12.59,
+        "wind_deg": null,
+        "wind_speed": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.33, 31.95]
+      },
+      "properties": {
+        "city": "Ouargla",
+        "clouds": 40,
+        "country": "DZ",
+        "humidity": 31,
+        "pressure": 1018,
+        "temp": 23,
+        "feels_like": 18.3,
+        "wind_deg": 100,
+        "wind_speed": 5.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.19, 32.88]
+      },
+      "properties": {
+        "city": "Tripoli",
+        "clouds": 3,
+        "country": "LY",
+        "humidity": 63,
+        "pressure": 1023,
+        "temp": 16.02,
+        "feels_like": 11.15,
+        "wind_deg": 119,
+        "wind_speed": 6.64
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [20.23, 30.76]
+      },
+      "properties": {
+        "city": "Ajdabiya",
+        "clouds": 9,
+        "country": "LY",
+        "humidity": 66,
+        "pressure": 1020,
+        "temp": 15.52,
+        "feels_like": 11.76,
+        "wind_deg": 337,
+        "wind_speed": 5.13
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.95, 41.01]
+      },
+      "properties": {
+        "city": "Istanbul",
+        "clouds": 0,
+        "country": "TR",
+        "humidity": 87,
+        "pressure": 1018,
+        "temp": 5.77,
+        "feels_like": 3.36,
+        "wind_deg": 10,
+        "wind_speed": 1.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [31.25, 30.06]
+      },
+      "properties": {
+        "city": "Cairo",
+        "clouds": 7,
+        "country": "EG",
+        "humidity": 59,
+        "pressure": 1016,
+        "temp": 15.54,
+        "feels_like": 13.15,
+        "wind_deg": 330,
+        "wind_speed": 2.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [44.4, 33.34]
+      },
+      "properties": {
+        "city": "Baghdad",
+        "clouds": 0,
+        "country": "IQ",
+        "humidity": 52,
+        "pressure": 1004,
+        "temp": 19,
+        "feels_like": 16.94,
+        "wind_deg": 330,
+        "wind_speed": 2.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.61, 24.47]
+      },
+      "properties": {
+        "city": "Medina",
+        "clouds": 0,
+        "country": "SA",
+        "humidity": 18,
+        "pressure": 1012,
+        "temp": 28,
+        "feels_like": 22.67,
+        "wind_deg": 280,
+        "wind_speed": 5.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-22.45, 70.45]
+      },
+      "properties": {
+        "city": "Ittorisseq",
+        "clouds": 0,
+        "country": "GL",
+        "humidity": 50,
+        "pressure": 1024,
+        "temp": -10.58,
+        "feels_like": -16.1,
+        "wind_deg": 356,
+        "wind_speed": 2.81
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.72, 70.92]
+      },
+      "properties": {
+        "city": "Olonkinbyen",
+        "clouds": 36,
+        "country": "SJ",
+        "humidity": 53,
+        "pressure": 1022,
+        "temp": -3.38,
+        "feels_like": -8.93,
+        "wind_deg": 312,
+        "wind_speed": 3.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [53.09, 67.67]
+      },
+      "properties": {
+        "city": "Naryan-Mar",
+        "clouds": 94,
+        "country": "RU",
+        "humidity": 91,
+        "pressure": 994,
+        "temp": -6.78,
+        "feels_like": -13.84,
+        "wind_deg": 302,
+        "wind_speed": 5.95
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [64, 67.5]
+      },
+      "properties": {
+        "city": "Vorkuta",
+        "clouds": 100,
+        "country": "RU",
+        "humidity": 98,
+        "pressure": 990,
+        "temp": 0.02,
+        "feels_like": -6.66,
+        "wind_deg": 248,
+        "wind_speed": 6.65
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-16.9, 32.63]
+      },
+      "properties": {
+        "city": "Funchal",
+        "clouds": 20,
+        "country": "PT",
+        "humidity": 72,
+        "pressure": 1023,
+        "temp": 17.14,
+        "feels_like": 16.3,
+        "wind_deg": null,
+        "wind_speed": 2.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-15.41, 28.1]
+      },
+      "properties": {
+        "city": "Las Palmas de Gran Canaria",
+        "clouds": 75,
+        "country": "ES",
+        "humidity": 73,
+        "pressure": 1021,
+        "temp": 20.56,
+        "feels_like": 16.64,
+        "wind_deg": 10,
+        "wind_speed": 8.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-7.62, 33.59]
+      },
+      "properties": {
+        "city": "Casablanca",
+        "clouds": 75,
+        "country": "MA",
+        "humidity": 88,
+        "pressure": 1020,
+        "temp": 17.31,
+        "feels_like": 17.22,
+        "wind_deg": 350,
+        "wind_speed": 2.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.01, 31.63]
+      },
+      "properties": {
+        "city": "Marrakesh",
+        "clouds": 20,
+        "country": "MA",
+        "humidity": 56,
+        "pressure": 1020,
+        "temp": 20,
+        "feels_like": 18.84,
+        "wind_deg": 360,
+        "wind_speed": 2.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [51.42, 35.69]
+      },
+      "properties": {
+        "city": "Tehran",
+        "clouds": 90,
+        "country": "IR",
+        "humidity": 93,
+        "pressure": 1016,
+        "temp": 5.31,
+        "feels_like": 1.87,
+        "wind_deg": 260,
+        "wind_speed": 3.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [47.79, 30.53]
+      },
+      "properties": {
+        "city": "Al Basrah",
+        "clouds": 40,
+        "country": "IQ",
+        "humidity": 57,
+        "pressure": 1005,
+        "temp": 26,
+        "feels_like": 24.73,
+        "wind_deg": 150,
+        "wind_speed": 5.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [59.61, 36.3]
+      },
+      "properties": {
+        "city": "Mashhad",
+        "clouds": 75,
+        "country": "IR",
+        "humidity": 60,
+        "pressure": 1018,
+        "temp": 3,
+        "feels_like": -1.89,
+        "wind_deg": 308,
+        "wind_speed": 3.41
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [67.08, 24.91]
+      },
+      "properties": {
+        "city": "Karachi",
+        "clouds": 0,
+        "country": "PK",
+        "humidity": 73,
+        "pressure": 1010,
+        "temp": 23,
+        "feels_like": 23.93,
+        "wind_deg": 240,
+        "wind_speed": 2.6
+      }
+    }
+  ]
 }
