@@ -61,6 +61,7 @@ export default class City extends Component<IProps, IState> {
       wind_deg: this.props.wind_deg,
       wind_speed: this.props.wind_speed,
     };
+    
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -91,62 +92,63 @@ export default class City extends Component<IProps, IState> {
   };
 
   render() {
+    let {favorite,clouds, feels_like,humidity,index,name,pressure,temp,wind_deg,wind_speed}=this.state;
     return (
       <Fragment>
         <div className="card cityCard">
           <div className="card-body">
             <h3 className="card-title text-center ">
               <span className="favoriteFlag">
-                {this.state.favorite ? icons.star : icons.starOpen}
+                {favorite ? icons.star : icons.starOpen}
               </span>
             </h3>
-            <h5 className="card-title">{this.state.name}</h5>
+            <h5 className="card-title">{name}</h5>
 
             <p className="card-text">
-              Temperature: {Number(this.state.temp).toFixed(0)}&deg;C
+              Temperature: {Number(temp).toFixed(0)}&deg;C
             </p>
             <p className="card-text">
-              Feels like: {Number(this.state.feels_like).toFixed(0)}&deg;C
+              Feels like: {Number(feels_like).toFixed(0)}&deg;C
             </p>
             <p className="card-text">
               Clouds: &nbsp;
-              {this.state.clouds < 25 ? (
+              {clouds < 25 ? (
                 <img
                   src="/images/sun.png"
-                  title={String(this.state.clouds)}
-                  alt={String(this.state.clouds)}
+                  title={String(clouds)}
+                  alt={String(clouds)}
                   className="cloudIcon"
                 />
-              ) : this.state.clouds < 50 ? (
+              ) : clouds < 50 ? (
                 <img
                   src="/images/cloudy.png"
-                  title={String(this.state.clouds)}
-                  alt={String(this.state.clouds)}
+                  title={String(clouds)}
+                  alt={String(clouds)}
                   className="cloudIcon"
                 />
-              ) : this.state.clouds < 75 ? (
+              ) : clouds < 75 ? (
                 <img
                   src="/images/cloud.png"
-                  title={String(this.state.clouds)}
-                  alt={String(this.state.clouds)}
+                  title={String(clouds)}
+                  alt={String(clouds)}
                   className="cloudIcon"
                 />
               ) : (
                 <img
                   src="/images/clouds.png"
-                  title={String(this.state.clouds)}
-                  alt={String(this.state.clouds)}
+                  title={String(clouds)}
+                  alt={String(clouds)}
                   className="cloudIcon"
                 />
               )}
             </p>
-            <p className="card-text">Humidity: {this.state.humidity}%</p>
-            <p className="card-text">Pressure: {this.state.pressure}</p>
-            <p className="card-text">Wind degree: {this.state.wind_deg}&deg;</p>
+            <p className="card-text">Humidity: {humidity}%</p>
+            <p className="card-text">Pressure: {pressure}</p>
+            <p className="card-text">Wind degree: {wind_deg}&deg;</p>
 
-            <p className="card-text">Wind speed: {this.state.wind_speed}</p>
+            <p className="card-text">Wind speed: {wind_speed}</p>
 
-            {this.state.favorite ? (
+            {favorite ? (
               <a
                 href="#"
                 onClick={this.handleRemoveFavorite}

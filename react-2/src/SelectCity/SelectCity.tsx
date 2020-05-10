@@ -61,6 +61,7 @@ export default class SelectCity extends Component<IProps, IState> {
   };
 
   render() {
+    let { Cities,value}=this.state
     return (
       <div className="SelectComponent mt-2">
         <select
@@ -68,15 +69,15 @@ export default class SelectCity extends Component<IProps, IState> {
           name=""
           id=""
           onChange={this.handleChangeSelected}
-          value={this.state.value}
+          value={value}
         >
           <option value="DEFAULT" disabled>
             Select City...
           </option>
-          {this.state.Cities.map((el) => {
+          {Cities.map(city => {
             return (
-              <option value={el.index} key={el.index}>
-                {el.name}
+              <option value={city.index} key={city.index}>
+                {city.name}
               </option>
             );
           })}
