@@ -92,4 +92,8 @@ export class StorageService{
     );
   }
 
+  public getStorageWordCount(){
+    return this.storageWord.length;
+  }
+
 }

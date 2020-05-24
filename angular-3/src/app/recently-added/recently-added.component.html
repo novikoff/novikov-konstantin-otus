@@ -1,6 +1,6 @@
 <div class="container-fluide">
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 mt-3">
      <div class="words">
        <p *ngFor="let word of this.myStorageService.getStorageWordOb() | async">{{word.en}} - {{word.ru}}</p>
      </div>

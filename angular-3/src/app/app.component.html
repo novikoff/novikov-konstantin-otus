@@ -13,34 +13,22 @@
     <div class="col-12">
       <h3>Learn English words</h3>
     </div>
+
     <div class="col-12 mt-5">
       <div class="card h-200">
         <div class="card-body pb-3">
-          <ul ngbNav #nav="ngbNav" [(activeId)]="activeTab" class="nav-tabs">
-            <li [ngbNavItem]="1">
-              <a ngbNavLink>Recently Added</a>
-              <ng-template ngbNavContent>
-                <app-recently-added></app-recently-added>
-              </ng-template>
-            </li>
-            <li [ngbNavItem]="2">
-              <a ngbNavLink>Go</a>
-              <ng-template ngbNavContent>
-                <app-go></app-go>
-              </ng-template>
-            </li>
-            <li [ngbNavItem]="3">
-              <a ngbNavLink>Settings</a>
-              <ng-template ngbNavContent>
-                <app-settings></app-settings>
-              </ng-template>
+          <ul ngbNav class="nav-tabs" activeId='1' >
+            <li ngbNavItem [ngbNavItem]="link.to"   *ngFor="let link of links" >
+              <a ngbNavLink routerLink="{{link.to}}" routerLinkActive="active">{{ link.title }}</a>
             </li>
           </ul>
+          <router-outlet></router-outlet>
 
-          <div [ngbNavOutlet]="nav" class="mt-2"></div>
         </div>
       </div>
     </div>
+
+
   </div>
 </div>
 </body>

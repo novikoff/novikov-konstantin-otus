@@ -18,8 +18,9 @@ export class GoComponent implements OnInit, OnDestroy  {
   public currentTask: IStorageWord;
   public answerInput: string;
   public nextActive = true;
-  public currentResult: {all: number, finish: number, ok: number, fail: number};
+  public currentResult: {all: number, finish: number, ok: number, fail: number} = {all: 0, finish: 0, ok: 0, fail: 0};
   public currentTaskModel: { equalVal: string; value: string; key: string };
+
   constructor(public myStorageService: StorageService) {
     this.settings = this.myStorageService.getSettings();
   }
@@ -31,16 +32,25 @@ export class GoComponent implements OnInit, OnDestroy  {
   }
 
   ngOnInit(): void {
-    this.timer = this.fmtMSS(this.settings.timerTime * 60);
-    this.timer$ = this.initiateTimer(this.settings.timerTime).subscribe(i => {
-      this.timer = this.fmtMSS(i);
-      if (i === 0){
-        this.timer$.unsubscribe();
-        this.nextActive = false;
-      }
-    });
-    this.generateTask();
-    this.startEdu();
+      this.timer = this.fmtMSS(Number(this.settings.timerTime * 60));
+      this.timer$ = this.initiateTimer(this.settings.timerTime).subscribe(i => {
+        this.timer = this.fmtMSS(i);
+        if (i === 0) {
+          this.timer$.unsubscribe();
+          this.nextActive = false;
+        }
+      });
+    if ( this.myStorageService.getStorageWordCount() > 0) {
+      console.log('staaaaaaaaaaaaaaaaaart');
+      this.generateTask();
+      this.startEdu();
+    }else{
+      this.currentTaskModel = {
+        value : '',
+        equalVal : '',
+        key : 'ru'
+      };
+    }
   }
 
   private initiateTimer(minutes: number) {
@@ -87,15 +97,15 @@ export class GoComponent implements OnInit, OnDestroy  {
     switch ( this.randomIntFromInterval(0, 1) ){
       case 0:
         this.currentTaskModel = {
-          value : this.currentTask.en,
-          equalVal : this.currentTask.ru,
+          value : this.currentTask.en ? this.currentTask.en : '',
+          equalVal : this.currentTask.ru ? this.currentTask.ru : '',
           key : 'en'
         };
         break;
       case 1:
         this.currentTaskModel = {
-          value : this.currentTask.en,
-          equalVal : this.currentTask.ru,
+          value : this.currentTask.en ? this.currentTask.en : '',
+          equalVal : this.currentTask.ru ? this.currentTask.ru : '',
           key : 'ru'
         };
         break;

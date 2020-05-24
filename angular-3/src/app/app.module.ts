@@ -7,8 +7,14 @@ import { RecentlyAddedComponent } from './recently-added/recently-added.componen
 import { GoComponent } from './go/go.component';
 import { SettingsComponent } from './settings/settings.component';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
+import {FormsModule, ReactiveFormsModule, NgForm} from '@angular/forms';
+import {RouterModule} from '@angular/router';
+const routes = [
+  { path: '', redirectTo: 'recentlyadded', pathMatch: 'full'},
+  { path: 'recentlyadded', component: RecentlyAddedComponent},
+  { path: 'go', component: GoComponent},
+  { path: 'settings', component: SettingsComponent}
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +27,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     NgbModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot( routes )
   ],
   providers: [],
   bootstrap: [AppComponent]

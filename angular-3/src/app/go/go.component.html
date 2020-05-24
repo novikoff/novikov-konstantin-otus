@@ -1,7 +1,7 @@
 
 <div class="container-fluide">
   <div class="row">
-    <div class="col-12 text-center">
+    <div class="col-12 text-center  mt-3">
      <h4>Education</h4>
     </div>
   </div>
@@ -10,12 +10,12 @@
       <input type="text" class="form-control" [(ngModel)]="timer">
     </div>
   </div>
-  <div class="row">
+  <div class="row" >
     <div class="col-4 mt-2 mb-2" >
-      <input type="text" id="ask" class="form-control" [value]="currentTaskModel.value"  >
+      <input type="text" id="ask" class="form-control" *ngIf="currentTaskModel.value" [value]="currentTaskModel.value"  >
     </div>
     <div class="col-4 mt-3 offset-1" >
-      <label for="ask" class="control-label">Finish:&nbsp;<b>{{currentResult.finish}}/{{currentResult.all}}</b>&nbsp;&nbsp;OK:&nbsp;<b>{{currentResult.ok}}</b>&nbsp;&nbsp;FAIL:&nbsp;<b>{{currentResult.fail}}</b></label>
+      <label for="ask" class="control-label" >Finish:&nbsp;<b>{{currentResult.finish}}/{{currentResult.all}}</b>&nbsp;&nbsp;OK:&nbsp;<b>{{currentResult.ok}}</b>&nbsp;&nbsp;FAIL:&nbsp;<b>{{currentResult.fail}}</b></label>
     </div>
   </div>
   <div class="row">
