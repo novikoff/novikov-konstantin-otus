@@ -23,12 +23,14 @@ const routes = [
     SettingsComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     NgbModule,
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    RouterModule.forRoot( routes )
+    RouterModule.forRoot(routes, {
+    initialNavigation: 'enabled'
+})
   ],
   providers: [],
   bootstrap: [AppComponent]

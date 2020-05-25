@@ -28,6 +28,7 @@ export class SettingsComponent implements OnInit {
       timerTime : mySettings.value.timerTime
     };
     this.myStorageService.setSettings(this.settings);
+
   }
 
   onReset(mySettings: NgForm) {

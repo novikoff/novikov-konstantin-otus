@@ -41,7 +41,6 @@ export class GoComponent implements OnInit, OnDestroy  {
         }
       });
     if ( this.myStorageService.getStorageWordCount() > 0) {
-      console.log('staaaaaaaaaaaaaaaaaart');
       this.generateTask();
       this.startEdu();
     }else{
