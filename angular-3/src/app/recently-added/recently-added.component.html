@@ -1,0 +1,41 @@
+<div class="container-fluide">
+  <div class="row">
+    <div class="col-12 mt-3">
+     <div class="words">
+       <p *ngFor="let word of this.myStorageService.getStorageWordOb() | async">{{word.en}} - {{word.ru}}</p>
+     </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4 offset-4 mt-3 ">
+      <button type="button" class="btn btn-primary btn-block" (click)="open(content)">Add new</button>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="modal.close('OK');submit()">
+  <div class="modal-body">
+
+      <div class="form-group">
+        <label for="newWord">Новое слово</label>
+        <div class="input-group">
+          <input id="newWord" class="form-control" placeholder="" formControlName="newWord">
+        </div>
+      </div>
+
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-outline-dark">Save</button>
+  </div>
+  </form>
+</ng-template>
+
+
