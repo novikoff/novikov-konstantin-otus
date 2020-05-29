@@ -1,0 +1,14 @@
+{
+    "name": "request",
+    "version": "1.0.0",
+    "description": "",
+    "main": "request.js",
+    "scripts": {
+        "start": "node request.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "http": "0.0.0"
+    }
+}
