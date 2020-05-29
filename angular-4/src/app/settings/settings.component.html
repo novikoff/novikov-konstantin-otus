@@ -1,0 +1,49 @@
+<div class="container-fluide pt-2  mt-3">
+  <form (ngSubmit)="onSubmit(mySettings)"  #mySettings='ngForm'>
+  <div class="row">
+    <div class="col-4">
+      <label for="langSelect" class="control-label">Language:</label>
+    </div>
+    <div class="col-6">
+      <select name="language" class="custom-select" id="langSelect" [(ngModel)]="settings.language">
+        <option value="en">English</option>
+        <option value="de" disabled>German</option>
+        <option value="fr" disabled>French</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-4">
+        <label for="nbWordsSelect">Number of words:</label>
+    </div>
+    <div class="col-6">
+          <select name="countWords" class="custom-select" id="nbWordsSelect"  [(ngModel)]="settings.countWords" >
+            <option value="5">5</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+          </select>
+      </div>
+    </div>
+  <div class="row mt-4">
+    <div class="col-4">
+      <label for="TimeSelect">Time:</label>
+    </div>
+    <div class="col-6">
+      <select name="timerTime" class="custom-select" id="TimeSelect" [(ngModel)]="settings.timerTime" >
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-5">
+      <button class="btn btn-secondary btn-block" type="button" (click)="onReset(mySettings)">Back</button>
+    </div>
+    <div class="col-5 offset-2">
+      <button class="btn btn-success btn-block" type="submit">Save</button>
+    </div>
+  </div>
+  </form>
+  </div>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{title}}</title>
+</head>
+<body>
+<div class="container ">
+  <div class="row">
+    <div class="col-12">
+      <h3>Learn English words</h3>
+    </div>
+
+    <div class="col-12 mt-5">
+      <div class="card h-200">
+        <div class="card-body pb-3">
+          <ul ngbNav class="nav-tabs" activeId='1' >
+            <li ngbNavItem [ngbNavItem]="link.to"   *ngFor="let link of links" >
+              <a ngbNavLink routerLink="{{link.to}}" routerLinkActive="active">{{ link.title }}</a>
+            </li>
+          </ul>
+          <router-outlet></router-outlet>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+</body>
+</html>
