@@ -11,6 +11,10 @@ import { createBrowserHistory } from "history";
 import { ConnectedRouter } from "connected-react-router";
 
 import "./index.scss";
+//import "./assets/css/font-awesome.css";
+// import "./assets/css/linearicons.css";
+// import "./assets/css/signpainter-housescript.css";
+// import "./assets/css/themify-icons.css";
 
 declare global {
   interface Window {
