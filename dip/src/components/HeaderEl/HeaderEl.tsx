@@ -1,9 +1,12 @@
 import React, { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {} from "../../redux/action/actions";
+import { Spring, animated } from "react-spring/renderprops";
+//import SlideToggleContent from "../effects/SlideToggleContent";
+
 import { Route } from "react-router-dom";
 import { withRouter } from "react-router";
-import { useTransition, animated } from "react-spring";
+//import { useTransition, animated } from "react-spring";
 import {
   Navbar,
   Container,
@@ -22,8 +25,57 @@ import "./HeaderEl.less";
 
 const HeaderEl = () => {
   const dispatch = useDispatch();
+  const [isVisible, setIsVisible] = useState(false);
+  const LOREM = `Hello world`;
+
+  const [toggle, setToggle] = useState(true);
+  const [text, setText] = useState([LOREM]);
+
+  const onToggle = () => {
+    setToggle(!toggle);
+  };
+
+  const onAddText = () => {
+    setToggle(true);
+    setText([...text, LOREM]);
+  };
+
+  const onRemoveText = () => {
+    setToggle(true);
+    setText(text.slice(1));
+  };
+
   return (
     <React.Fragment>
+      {/*<h1>Slide Toggle</h1>*/}
+      {/*<button type="button" onClick={() => setIsVisible(!isVisible)}>*/}
+      {/*  {isVisible ? "Close" : "Open"} content*/}
+      {/*</button>*/}
+      {/*<SlideToggleContent isVisible={isVisible}>*/}
+      {/*  <React.Fragment>*/}
+      {/*    <h2>Success!! 🎉</h2>*/}
+      {/*    <p>This content will be mounted and unmounted</p>*/}
+      {/*  </React.Fragment>*/}
+      {/*</SlideToggleContent>*/}
+      <button onClick={onToggle}>Toggle</button>
+      <button onClick={onAddText}>Add text</button>
+      <button onClick={onRemoveText}>Remove text</button>
+      <Spring
+        native
+        force
+        config={{ tension: 2000, friction: 100, precision: 1 }}
+        from={{ height: toggle ? 0 : "auto" }}
+        to={{ height: toggle ? "auto" : 0 }}
+      >
+        {(props) => (
+          <animated.div className="item" style={props}>
+            {text.map((t, i) => (
+              <p key={i}>{t}</p>
+            ))}
+          </animated.div>
+        )}
+      </Spring>
+
       <header className="header-area">
         <div className="header-large-device">
           <div className="header-top section-padding-2 bg-gray">
@@ -625,180 +677,196 @@ const HeaderEl = () => {
               <div className="col-12">
                 <div className="category-menu-wrap bg-theme-color-yellow">
                   <h3>
-                    <a className="showcat" href="#">
+                    <a
+                      className="showcat"
+                      onClick={() => setIsVisible(!isVisible)}
+                    >
                       <i className="lnr lnr-menu" /> Categories
                     </a>
                   </h3>
-                  <div className="category-menu mobile-category-menu hidecat">
-                    <nav>
-                      <ul>
-                        <li className="cr-dropdown">
-                          <a href="#">
-                            Computer <span className="fa fa-angle-down" />
-                          </a>
-                          <ul className="cr-menu-desktop-none">
-                            <li className="cr-sub-dropdown sub-style">
-                              <a href="#">
-                                Laptop Accessories{" "}
-                                <i className="fa fa-angle-down" />
-                              </a>
-                              <ul style={{ display: "none" }}>
-                                <li>
-                                  <a href="shop-fullwide.html">
-                                    Laptop Keyboard
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-fullwide.html">Laptop Mouse</a>
-                                </li>
-                                <li>
-                                  <a href="shop-fullwide.html">
-                                    Bluetooth Speaker
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-fullwide.html">LED Light</a>
-                                </li>
-                              </ul>
-                            </li>
-                            <li className="cr-sub-dropdown sub-style">
-                              <a href="#">
-                                Laptop Accessories{" "}
-                                <i className="fa fa-angle-down"></i>
-                              </a>
-                              <ul style={{ display: "none" }}>
-                                <li>
-                                  <a href="shop-fullwide.html">
-                                    Laptop Keyboard
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-fullwide.html">Laptop Mouse</a>
-                                </li>
-                                <li>
-                                  <a href="shop-fullwide.html">
-                                    Bluetooth Speaker
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-fullwide.html">LED Light</a>
-                                </li>
-                              </ul>
-                            </li>
-                            <li className="cr-sub-dropdown sub-style">
-                              <a href="#">
-                                Laptop Accessories{" "}
-                                <i className="fa fa-angle-down" />
-                              </a>
-                              <ul style={{ display: "none" }}>
-                                <li>
-                                  <a href="shop-fullwide.html">
-                                    Laptop Keyboard
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-fullwide.html">Laptop Mouse</a>
-                                </li>
-                                <li>
-                                  <a href="shop-fullwide.html">
-                                    Bluetooth Speaker
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-fullwide.html">LED Light</a>
-                                </li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </li>
-                        <li className="cr-dropdown">
-                          <a href="#">
-                            Accessories <span className="fa fa-angle-down" />
-                          </a>
-                          <ul className="cr-menu-desktop-none">
-                            <li className="cr-sub-dropdown sub-style">
-                              <a href="#">
-                                Laptop Accessories{" "}
-                                <i className="fa fa-angle-down" />
-                              </a>
-                              <ul style={{ display: "none" }}>
-                                <li>
-                                  <a href="shop-fullwide.html">
-                                    Laptop Keyboard
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-fullwide.html">Laptop Mouse</a>
-                                </li>
-                                <li>
-                                  <a href="shop-fullwide.html">
-                                    Bluetooth Speaker
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-fullwide.html">LED Light</a>
-                                </li>
-                              </ul>
-                            </li>
-                            <li className="cr-sub-dropdown sub-style">
-                              <a href="#">
-                                Laptop Accessories{" "}
-                                <i className="fa fa-angle-down"></i>
-                              </a>
-                              <ul style={{ display: "none" }}>
-                                <li>
-                                  <a href="shop-fullwide.html">
-                                    Laptop Keyboard
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-fullwide.html">Laptop Mouse</a>
-                                </li>
-                                <li>
-                                  <a href="shop-fullwide.html">
-                                    Bluetooth Speaker
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-fullwide.html">LED Light</a>
-                                </li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </li>
-                        <li className="cr-dropdown">
-                          <a href="shop-fullwide.html">Computer Kit</a>
-                        </li>
-                        <li className="cr-dropdown">
-                          <a href="shop-fullwide.html">Laptop</a>
-                        </li>
-                        <li className="cr-dropdown">
-                          <a href="shop-fullwide.html">Laptop Accessories </a>
-                        </li>
-                        <li className="cr-dropdown">
-                          <a href="shop-fullwide.html">Smartwatch</a>
-                        </li>
-                        <li className="cr-dropdown">
-                          <a href="/shop-fullwide.html">Accessories</a>
-                        </li>
-                        <li className="cr-dropdown">
-                          <a href="/shop-fullwide.html">Cameras</a>
-                        </li>
-                        <li className="cr-dropdown">
-                          <a href="/shop-fullwide.html">Mobile Phone</a>
-                        </li>
-                        <li className="cr-dropdown">
-                          <a href="/shop-fullwide.html">Drone</a>
-                        </li>
-                        <li className="cr-dropdown">
-                          <a href="/shop-fullwide.html">Drone Cameras</a>
-                        </li>
-                        <li className="cr-dropdown">
-                          <a href="/shop-fullwide.html">Apple Products </a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
+
+                  <React.Fragment>
+                    <div className="category-menu mobile-category-menu hidecat">
+                      <nav>
+                        <ul>
+                          <li className="cr-dropdown">
+                            <a href="#">
+                              Computer <span className="fa fa-angle-down" />
+                            </a>
+                            <ul className="cr-menu-desktop-none">
+                              <li className="cr-sub-dropdown sub-style">
+                                <a href="#">
+                                  Laptop Accessories{" "}
+                                  <i className="fa fa-angle-down" />
+                                </a>
+                                <ul style={{ display: "none" }}>
+                                  <li>
+                                    <a href="shop-fullwide.html">
+                                      Laptop Keyboard
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="shop-fullwide.html">
+                                      Laptop Mouse
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="shop-fullwide.html">
+                                      Bluetooth Speaker
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="shop-fullwide.html">LED Light</a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li className="cr-sub-dropdown sub-style">
+                                <a href="#">
+                                  Laptop Accessories{" "}
+                                  <i className="fa fa-angle-down"></i>
+                                </a>
+                                <ul style={{ display: "none" }}>
+                                  <li>
+                                    <a href="shop-fullwide.html">
+                                      Laptop Keyboard
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="shop-fullwide.html">
+                                      Laptop Mouse
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="shop-fullwide.html">
+                                      Bluetooth Speaker
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="shop-fullwide.html">LED Light</a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li className="cr-sub-dropdown sub-style">
+                                <a href="#">
+                                  Laptop Accessories{" "}
+                                  <i className="fa fa-angle-down" />
+                                </a>
+                                <ul style={{ display: "none" }}>
+                                  <li>
+                                    <a href="shop-fullwide.html">
+                                      Laptop Keyboard
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="shop-fullwide.html">
+                                      Laptop Mouse
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="shop-fullwide.html">
+                                      Bluetooth Speaker
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="shop-fullwide.html">LED Light</a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li className="cr-dropdown">
+                            <a href="#">
+                              Accessories <span className="fa fa-angle-down" />
+                            </a>
+                            <ul className="cr-menu-desktop-none">
+                              <li className="cr-sub-dropdown sub-style">
+                                <a href="#">
+                                  Laptop Accessories{" "}
+                                  <i className="fa fa-angle-down" />
+                                </a>
+                                <ul style={{ display: "none" }}>
+                                  <li>
+                                    <a href="shop-fullwide.html">
+                                      Laptop Keyboard
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="shop-fullwide.html">
+                                      Laptop Mouse
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="shop-fullwide.html">
+                                      Bluetooth Speaker
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="shop-fullwide.html">LED Light</a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li className="cr-sub-dropdown sub-style">
+                                <a href="#">
+                                  Laptop Accessories{" "}
+                                  <i className="fa fa-angle-down"></i>
+                                </a>
+                                <ul style={{ display: "none" }}>
+                                  <li>
+                                    <a href="shop-fullwide.html">
+                                      Laptop Keyboard
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="shop-fullwide.html">
+                                      Laptop Mouse
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="shop-fullwide.html">
+                                      Bluetooth Speaker
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="shop-fullwide.html">LED Light</a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li className="cr-dropdown">
+                            <a href="shop-fullwide.html">Computer Kit</a>
+                          </li>
+                          <li className="cr-dropdown">
+                            <a href="shop-fullwide.html">Laptop</a>
+                          </li>
+                          <li className="cr-dropdown">
+                            <a href="shop-fullwide.html">Laptop Accessories </a>
+                          </li>
+                          <li className="cr-dropdown">
+                            <a href="shop-fullwide.html">Smartwatch</a>
+                          </li>
+                          <li className="cr-dropdown">
+                            <a href="/shop-fullwide.html">Accessories</a>
+                          </li>
+                          <li className="cr-dropdown">
+                            <a href="/shop-fullwide.html">Cameras</a>
+                          </li>
+                          <li className="cr-dropdown">
+                            <a href="/shop-fullwide.html">Mobile Phone</a>
+                          </li>
+                          <li className="cr-dropdown">
+                            <a href="/shop-fullwide.html">Drone</a>
+                          </li>
+                          <li className="cr-dropdown">
+                            <a href="/shop-fullwide.html">Drone Cameras</a>
+                          </li>
+                          <li className="cr-dropdown">
+                            <a href="/shop-fullwide.html">Apple Products </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </React.Fragment>
                 </div>
               </div>
             </div>
