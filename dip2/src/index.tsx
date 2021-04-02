@@ -11,6 +11,9 @@ import reduxThunk  from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 
+import furniture_offer_banner_1 from './assets/images/banner/furniture-offer-banner-1.jpg'
+
+
 // <!-- The core Firebase JS SDK is always required and must be listed first -->
 // <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 //
