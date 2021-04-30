@@ -19,7 +19,8 @@ import { Provider } from "react-redux";
 import reduxThunk  from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension';
 import {BrowserRouter} from "react-router-dom"
-
+import {persistStore} from "redux-persist"
+import {PersistGate} from "redux-persist/integration/react";
 
 
 // <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -65,12 +66,17 @@ const enhancer = composeEnhancers(
 
 
 const store = createStore(rootReducer, enhancer);
+const persistor = persistStore(store);
+
+
 
 //const store = createStore(rootReducer,applyMiddleware(loggerMiddleware,reduxThunk));
 const app = (
     <BrowserRouter>
         <Provider store={store}>
-            <App />
+            <PersistGate persistor={persistor}>
+                <App />
+            </PersistGate>
         </Provider>
     </BrowserRouter>
 )

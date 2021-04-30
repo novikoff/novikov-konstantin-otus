@@ -90,6 +90,7 @@ app.get('/authVerify', FBAuth, async (req, res) => {
 });
 
 
+
 app.post('/authVerify', FBAuth ,async (req, res) => {
     //res.status(200).send({'verify':'ok'});
     if(user!==null && user.user_id!==null){
