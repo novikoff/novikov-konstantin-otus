@@ -1,5 +1,7 @@
 import {ADD, ADD_NUMBER, ASYNC_ADD, SUB} from "./actionTypes";
+//import {SIGN_IN,SIGN_UP,LOG_OUT} from "./actionTypes";
 import {Dispatch} from "redux";
+
 
 
 export function add(){
@@ -20,6 +22,9 @@ export function addNumber(number:number){
         payload:number
     }
 }
+
+
+
 
 export function asyncAdd(number:number){
     return (dispatch:Dispatch)=>{

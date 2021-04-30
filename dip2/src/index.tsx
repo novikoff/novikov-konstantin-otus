@@ -1,17 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 //import './index.css';
+
+import 'bootstrap/dist/css/bootstrap.css';
+import "./css/font-awesome.css";
+import "./css/linearicons.css";
+import "./css/signpainter-housescript.css";
+import "./css/themify-icons.css";
+
 import "./index.scss";
+
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {createStore, applyMiddleware, MiddlewareAPI, Dispatch, Action, compose} from 'redux';
+import {createStore, applyMiddleware, MiddlewareAPI, Dispatch, Action} from 'redux';
 import rootReducer from "./redux/rootReducer";
 import { Provider } from "react-redux";
 import reduxThunk  from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension';
+import {BrowserRouter} from "react-router-dom"
 
-
-import furniture_offer_banner_1 from './assets/images/banner/furniture-offer-banner-1.jpg'
 
 
 // <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -60,9 +68,11 @@ const store = createStore(rootReducer, enhancer);
 
 //const store = createStore(rootReducer,applyMiddleware(loggerMiddleware,reduxThunk));
 const app = (
-    <Provider store={store}>
-        <App />
-    </Provider>
+    <BrowserRouter>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </BrowserRouter>
 )
 ReactDOM.render(
   app,

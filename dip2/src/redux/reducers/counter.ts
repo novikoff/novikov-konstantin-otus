@@ -1,9 +1,9 @@
-import {ADD, ADD_NUMBER, ASYNC_ADD, SUB} from "../actions/actionTypes";
+import {ADD, ADD_NUMBER, SUB} from "../actions/actionTypes";
 
 const initialState = {
     counter:0
 }
-export default function rootReducer(state=initialState,action:any){
+export default function counterReducer(state=initialState,action:any){
     switch(action.type){
         case ADD:
             return {...state,counter:state.counter+1};
